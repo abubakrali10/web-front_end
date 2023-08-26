@@ -105,6 +105,8 @@ body {
 }
 
 /* starting the main styles */
+
+/* styles for header section */
 .header {
     background-color: #43281C;
     padding: 20px;
@@ -121,4 +123,140 @@ body {
 
 .header h1 {
     color: #FBF2C0;
+	font-weight: bold;
+}
+
+/* styles for main container */
+.main-container {
+	background-color: #EFEFEF;
+	height: 100vh;
+	padding: 50px 40px;
+}
+
+.checkout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	row-gap: 30px;
+	column-gap: 70px;
+}
+
+.items {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+}
+
+.name-form {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.payment-form {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.checkout-details {
+	background-color: #EEE1D5;
+	border-radius: 7px;
+	box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+	padding: 15px 30px 30px 30px;
+}
+
+.checkout-details h2 {
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	color: #8B5D32;
+	font-size: 1.3em;
+}
+
+.item-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-info span {
+	margin-bottom: 5px;
+}
+
+.items li:not(:last-of-type):after {
+	content: "";
+	border-bottom: 3px solid #E8D2BD;
+	display: block;
+	padding-top: 15px;
+}
+
+.items li {
+	margin: 15px 0;
+}
+
+.item-count, .item-name {
+	display: inline-block;
+}
+
+.item-count {
+	margin-right: 20px;
+}
+
+.item-name, .item-price {
+	font-weight: bold;
+}
+
+.item-name, .item-count, .item-price {
+	color: #565D48;
+}
+
+.item-extras {
+	margin-left: 43px;
+}
+
+.item-extras p {
+	color: #8B5D32;
+}
+
+
+.form-group {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.form-input {
+	background-color: rgba(0,0,0,0);
+	border: 2px #885a2d solid;
+	padding: 8px;
+	border-radius: 100px;
+	width: 100%;
+	text-indent: 18px;
+	font-size: 18px;
+	color: #565D48;
+  }  
+
+.form-input::placeholder {
+	color: #565D48;
+}
+
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-label {
+	color: #8B5D32;
+	background-color: #EEE1D5;
+	font-size: 11px;
+	position: absolute;
+	left: 25px;
+	top: -7px;
+	padding: 0 2px;
+}
+
+.ccv {
+	width: 30%;
 }
